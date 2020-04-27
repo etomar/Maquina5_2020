@@ -96,10 +96,10 @@ public class MaquinaBebidas {
 	bebida */
 	/* Entradas: char o, la orden del usuario */
 	/* Salidas: Ninguna */
-	
 	private void ordenSeleccion (char o) {
             switch(o){
-            case 1:                             //cola
+                
+            case 1:                             
                 if(cola.pulsarBoton()==true){
                     if(precio<=contador.Saldo()){
                         cola.iniciarDispensadorDeBotes(cola.botesDisponibles ()-1);
@@ -110,7 +110,7 @@ public class MaquinaBebidas {
                 else{System.out.println("No quedan mas latas");}
             break;
             
-            case 2://limon
+            case 2:
                 if(limon.pulsarBoton()==true){
                     if(precio<=contador.Saldo()){
                         limon.iniciarDispensadorDeBotes(limon.botesDisponibles ()-1);
@@ -121,7 +121,7 @@ public class MaquinaBebidas {
                 else{System.out.println("No quedan mas latas");}
             break;
             
-            case 3://naranja
+            case 3:
                 if(naranja.pulsarBoton()==true){
                     if(precio<=contador.Saldo()){
                         naranja.iniciarDispensadorDeBotes(naranja.botesDisponibles ()-1);
@@ -132,7 +132,7 @@ public class MaquinaBebidas {
                 else{System.out.println("No quedan mas latas");}
             break;
             
-            case 4://tonica
+            case 4:
                 if(tonica.pulsarBoton()==true){
                     if(precio<=contador.Saldo()){
                         tonica.iniciarDispensadorDeBotes(tonica.botesDisponibles ()-1);
@@ -143,7 +143,6 @@ public class MaquinaBebidas {
                 else{System.out.println("No quedan mas latas");}
             break;
             
-            //agua
             case 5:                                             
                 if(agua.pulsarBoton()==true){
                     if(precio<=contador.Saldo()){
