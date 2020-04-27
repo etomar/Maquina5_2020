@@ -29,3 +29,4 @@ public float saldo (){
 public void insertarMoneda (float m){
     cantidad += m;
 }
+}
