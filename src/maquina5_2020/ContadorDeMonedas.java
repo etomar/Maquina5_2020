@@ -29,4 +29,16 @@ public float saldo (){
 public void insertarMoneda (float m){
     cantidad += m;
 }
+/* Devuelve el cambio, si es posible */
+/* Una vez entregado el cambio, el dinero introducido por el
+cliente */
+/* pasa a engrosar el disponible de la maquina
+/* Entradas: float c, el precio del producto*/
+/* Salidas: el cambio, negativo si falta dinero */
+//public float darCambioDe (float c);
+/* El cliente recupera el dinero introducido si todavia */
+/* no se ha realizado la venta */
+/* Entradas: Ninguna */
+/* Salidas: float, la cantidad devuelta */
+//public float Retornar ();
 }
