@@ -67,7 +67,7 @@ public class MaquinaBebidas {
         } 
         
         
-	/* Realiza las acciones relacionadas con la introducciï¿½n de
+	/* Realiza las acciones relacionadas con la introducció de
 	monedas */
 	/* Entradas: char o, la orden del usuario */
 	/* Salidas: Ninguna */

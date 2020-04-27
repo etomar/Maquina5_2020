@@ -1,17 +1,21 @@
 package maquina5_2020;
 /**
  *
- * @author Iv√°n (modificado @mithjack)
+ * @author Iv·n (modificado @mithjack)
  */
 public class ContadorDeMonedas{
-    private float cantidad; /*Dinero introducido por el usuario actual.*/
-    private float disponible; /*/Dinero almacenado en la maquina, se utiliza para dar cambio.*/
+    private float cantidad; 
+/*Dinero introducido por el usuario actual.*/
+    
+    private float disponible; 
+  /*/Dinero almacenado en la maquina, se utiliza para dar cambio.*/
+    
 /* Inicializa el objeto y fija el cambio inicialmente disponible. */
 /* Entradas: float i, saldo inicialmente disponible para cambios */
 /* Salidas: Ninguna*/
 
     public void iniciarContadorDeMonedas (float i){
-        disponible = i;
+        disponible=i;
     }
 
 /* Informa sobre el saldo actual del cliente */
@@ -29,16 +33,15 @@ public class ContadorDeMonedas{
     }
 
 /* Devuelve el cambio, si es posible */
-/* Una vez entregado el cambio, el dinero introducido por el
-cliente */
+/* Una vez entregado el cambio, el dinero introducido por el cliente */
 /* pasa a engrosar el disponible de la maquina
 /* Entradas: float c, el precio del producto*/
 /* Salidas: el cambio, negativo si falta dinero */
     public float darCambioDe (float c){
     	float cambio;
-        cambio=cantidad-c;//dinero introducido menos el precio del bote
-        cantidad-=c;//el saldo del usuario disminuye en el precio del bote
-        disponible+=c;//el disponible de la m·quina aumenta en el precio del bote
+        cambio=cantidad-c;
+        cantidad-=c;
+        disponible+=c;
         return cambio;
     }
     
