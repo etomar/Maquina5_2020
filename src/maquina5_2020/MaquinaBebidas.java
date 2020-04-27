@@ -21,7 +21,7 @@ public class MaquinaBebidas {
 	    this.tonica= new DispensadorDeBotes(b);
 	    this.agua= new DispensadorDeBotes(b);
             this.precio= pvp;
-            contador= new ContadorDeMonedas();	
+            this.contador= new ContadorDeMonedas();	
 	}
 	
 	/* Responder a una acci�n del usuario. Discrimina el tipo de
