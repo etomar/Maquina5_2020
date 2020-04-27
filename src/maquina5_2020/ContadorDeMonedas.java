@@ -17,7 +17,7 @@ public class ContadorDeMonedas{
 /* Informa sobre el saldo actual del cliente */
 /* Entradas: Ninguna */
 /* Salidas: float, el saldo del cliente */
-    public float saldo (){
+    public float saldo(){
         return cantidad;
     }
 
@@ -35,12 +35,12 @@ cliente */
 /* Entradas: float c, el precio del producto*/
 /* Salidas: el cambio, negativo si falta dinero */
     public float darCambioDe (float c){
-        float calculo=0;
-	calculo=cantidad-c;
-	disponible+=c;
-	disponible-=0.75;
-	return calculo;
-}
+    	float cambio;
+        cambio=cantidad-c;//dinero introducido menos el precio del bote
+        cantidad-=c;//el saldo del usuario disminuye en el precio del bote
+        disponible+=c;//el disponible de la máquina aumenta en el precio del bote
+        return cambio;
+    }
     
 /* El cliente recupera el dinero introducido si todavia */
 /* no se ha realizado la venta */

@@ -10,27 +10,30 @@ package maquina5_2020;
  * @author joni
  */
 public class DispensadorDeBotes {
-    private int botes;//Numero actual de botes.
+    private int botes;
+    
     /* Inicializa el dispensador y pone i botes en él*/
     /* Entrada: int i, numero de botes en el dispensador*/
-    /* Salidas: Ninguna */
-    
-    
+    /* Salidas: Ninguna */ 
    public void iniciarDispensadorDeBotes(int i) {
-		this.botes = i;
+	   this.botes=i;
+	   //System.out.println(i+" "+this.botes); //Comprobar que inicia las latas
 	}
+   
     /* Intenta dar un bote, devuelve true si es posible y falso
     si no haybotes */
     /* Entrada: Ninguna */
     /* Salidas: bool, true si entrega el bote */
     public boolean pulsarBoton(){
-        boolean ok = false;
+        boolean darBotes = false;
+        //System.out.println("procesando pedido"); //comprobar que entra a pulsar
 		if (this.botes > 0) {
 			this.botes--;
-			ok = true;
+			darBotes = true;
 		}
-		return ok;
+		return darBotes;
 	}
+    
     /*Muestra el numero de botes disponibles en el dispensador*/
     /* Entrada: Ninguna */
     /* Salidas: int, el numero de botes */

@@ -15,18 +15,18 @@ public class MaquinaBebidas {
 	/* float pvp, precio de las bebidas */
 	/* Salidas: Ninguna */
 	public void iniciarMaquinaDeBebidas (float m, int b, float pvp){
-            this.cola= new DispensadorDeBotes();
+        cola= new DispensadorDeBotes();
 	    this.limon= new DispensadorDeBotes();
 	    this.naranja= new DispensadorDeBotes();
 	    this.tonica= new DispensadorDeBotes();
 	    this.agua= new DispensadorDeBotes();
-            this.precio= pvp;
-            this.contador= new ContadorDeMonedas();
-            cola.iniciarDispensadorDeBotes(b);
-            limon.iniciarDispensadorDeBotes(b);
-            naranja.iniciarDispensadorDeBotes(b);
-            tonica.iniciarDispensadorDeBotes(b);
-            agua.iniciarDispensadorDeBotes(b);         
+        this.precio= pvp;
+        this.contador= new ContadorDeMonedas();
+        cola.iniciarDispensadorDeBotes(b);
+        limon.iniciarDispensadorDeBotes(b);
+        naranja.iniciarDispensadorDeBotes(b);
+        tonica.iniciarDispensadorDeBotes(b);
+        agua.iniciarDispensadorDeBotes(b);         
 	}
 	
 	/* Responder a una acci�n del usuario. Discrimina el tipo de
@@ -38,11 +38,11 @@ public class MaquinaBebidas {
             if(o=='1'||o=='2'||o=='3'||o=='4'||o=='5'){
                 ordenSeleccion(o);
             }
-            else{
-              if(o=='A'||o=='B'||o=='C'||o=='D'||o=='E'||o=='R'){
+
+            if(o=='A'||o=='B'||o=='C'||o=='D'||o=='E'||o=='R'){
                 ordenMonedas(o);
-                }  
-            }
+             }  
+            
 	}
         
         
@@ -100,60 +100,41 @@ public class MaquinaBebidas {
 	bebida */
 	/* Entradas: char o, la orden del usuario */
 	/* Salidas: Ninguna */
-	private void ordenSeleccion (char o) {
-            switch(o){
-                
-            case 1:                             
-                if(cola.pulsarBoton()==true){
-                    if(precio<=contador.saldo()){
-                        cola.iniciarDispensadorDeBotes(cola.botesDisponibles()-1);
-                    }
-                    else{System.out.println("Te faltan monedas");}
-                }
-                else{System.out.println("No quedan mas latas");}
-            break;
-            
-            case 2:
-                if(limon.pulsarBoton()==true){
-                    if(precio<=contador.saldo()){
-                        limon.iniciarDispensadorDeBotes(limon.botesDisponibles()-1);
-                    }
-                    else{System.out.println("Te faltan monedas");}
-                }
-                else{System.out.println("No quedan mas latas");}
-            break;
-            
-            case 3:
-                if(naranja.pulsarBoton()==true){
-                    if(precio<=contador.saldo()){
-                        naranja.iniciarDispensadorDeBotes(naranja.botesDisponibles()-1);
-                    }
-                    else{System.out.println("Te faltan monedas");}
-                }
-                else{System.out.println("No quedan mas latas");}
-            break;
-            
-            case 4:
-                if(tonica.pulsarBoton()==true){
-                    if(precio<=contador.saldo()){
-                        tonica.iniciarDispensadorDeBotes(tonica.botesDisponibles ()-1);
-                    }
-                    else{System.out.println("Te faltan monedas");}
-                }
-                else{System.out.println("No quedan mas latas");}
-            break;
-            
-            case 5:                                             
-                if(agua.pulsarBoton()==true){
-                    if(precio<=contador.saldo()){
-                        agua.iniciarDispensadorDeBotes(agua.botesDisponibles()-1);
-                    }
-                    else{System.out.println("Te faltan monedas");}
-                }
-                else{System.out.println("No quedan mas latas");}
-            break;
-            
-        }
-    
-    }
-} 
+	private void ordenSeleccion(char o) {
+		if (contador.saldo()>=precio) {
+			switch (o) {
+			case '1':
+				if (cola.pulsarBoton())
+					System.out.println(contador.darCambioDe(precio));
+				else
+					System.out.println("No quedan latas");
+				break;
+			case '2':
+				if (limon.pulsarBoton())
+					System.out.println(contador.darCambioDe(precio));
+				else
+					System.out.println("No quedan latas");
+				break;
+			case '3':
+				if (naranja.pulsarBoton())
+					System.out.println(contador.darCambioDe(precio));
+				else
+					System.out.println("No quedan latas");
+				break;
+			case '4':
+				if (tonica.pulsarBoton())
+					System.out.println(contador.darCambioDe(precio));
+				else
+					System.out.println("No quedan latas");
+				break;
+			case '5':
+				if (agua.pulsarBoton())
+					System.out.println(contador.darCambioDe(precio));
+				else
+					System.out.println("No quedan latas");
+				break;
+			}
+		} else {System.out.println("No tienes saldo suficiente");
+		}
+	}
+}
