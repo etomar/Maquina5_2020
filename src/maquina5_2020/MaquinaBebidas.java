@@ -29,9 +29,15 @@ public class MaquinaBebidas {
 	/* y utiliza las operaciones privadas */
 	/* Entradas: char o, la orden del usuario */
 	/* Salidas: Ninguna */
-	
 	public void darOrden (char o) {
-		
+            if(o=='1'||o=='2'||o=='3'||o=='4'||o=='5'){
+                ordenSeleccion(o);
+            }
+            else{
+              if(o=='A'||o=='B'||o=='C'||o=='D'||o=='E'||o=='R'){
+                ordenMonedas(o);
+                }  
+            }
 	}
         
         
@@ -41,12 +47,12 @@ public class MaquinaBebidas {
 	/* Entradas: Ninguna */
 	/* Salidas: Ninguna */
 	public void visualizarMaquina (){
-            System.out.println("Cola: "+cola.botesDisponibles());
-            System.out.println("Naranja: "+naranja.botesDisponibles());
-            System.out.println("Limon: "+limon.botesDisponibles());
-            System.out.println("Tonica: "+tonica.botesDisponibles());
-            System.out.println("Agua: "+agua.botesDisponibles());
-            System.out.println("Precio: "+precio);
+            System.out.println("De Cola hay: "+cola.botesDisponibles());
+            System.out.println("De Naranja hay: "+naranja.botesDisponibles());
+            System.out.println("De Limon hay: "+limon.botesDisponibles());
+            System.out.println("De Tonica hay: "+tonica.botesDisponibles());
+            System.out.println("De Agua hay: "+agua.botesDisponibles());
+            System.out.println("Precio total: "+precio);
             System.out.println("Saldo Disponible: "+contador.getSaldo());  
         } 
         
