@@ -15,13 +15,18 @@ public class MaquinaBebidas {
 	/* float pvp, precio de las bebidas */
 	/* Salidas: Ninguna */
 	public void iniciarMaquinaDeBebidas (float m, int b, float pvp){
-            this.cola= new DispensadorDeBotes(b);
-	    this.limon= new DispensadorDeBotes(b);
-	    this.naranja= new DispensadorDeBotes(b);
-	    this.tonica= new DispensadorDeBotes(b);
-	    this.agua= new DispensadorDeBotes(b);
+            this.cola= new DispensadorDeBotes();
+	    this.limon= new DispensadorDeBotes();
+	    this.naranja= new DispensadorDeBotes();
+	    this.tonica= new DispensadorDeBotes();
+	    this.agua= new DispensadorDeBotes();
             this.precio= pvp;
-            this.contador= new ContadorDeMonedas();	
+            this.contador= new ContadorDeMonedas();
+            cola.iniciarDispensadorDeBotes(b);
+            limon.iniciarDispensadorDeBotes(b);
+            naranja.iniciarDispensadorDeBotes(b);
+            tonica.iniciarDispensadorDeBotes(b);
+            agua.iniciarDispensadorDeBotes(b);         
 	}
 	
 	/* Responder a una acci�n del usuario. Discrimina el tipo de

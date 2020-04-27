@@ -14,32 +14,27 @@ public class DispensadorDeBotes {
     /* Inicializa el dispensador y pone i botes en él*/
     /* Entrada: int i, numero de botes en el dispensador*/
     /* Salidas: Ninguna */
-    public DispensadorDeBotes(int b){
-        iniciarDispensadorDeBotes(b);
-    }
-    public void iniciarDispensadorDeBotes (int i){
-       botes=i;
-       
-        
-    }
+    
+    
+   public void iniciarDispensadorDeBotes(int i) {
+		this.botes = i;
+	}
     /* Intenta dar un bote, devuelve true si es posible y falso
     si no haybotes */
     /* Entrada: Ninguna */
     /* Salidas: bool, true si entrega el bote */
     public boolean pulsarBoton(){
-        boolean darBotes=false;
-        if(botes>0){
-            darBotes=true;
-            botes--;
-        }else{
-            darBotes=false;
-        }
-        return darBotes;
-    }
+        boolean ok = false;
+		if (this.botes > 0) {
+			this.botes--;
+			ok = true;
+		}
+		return ok;
+	}
     /*Muestra el numero de botes disponibles en el dispensador*/
     /* Entrada: Ninguna */
     /* Salidas: int, el numero de botes */
     public int botesDisponibles(){
-        return botes;
-    }
+        return this.botes;
+	}
 }
