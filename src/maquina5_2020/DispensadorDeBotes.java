@@ -14,6 +14,9 @@ public class DispensadorDeBotes {
     /* Inicializa el dispensador y pone i botes en él*/
     /* Entrada: int i, numero de botes en el dispensador*/
     /* Salidas: Ninguna */
+    public DispensadorDeBotes(int b){
+        iniciarDispensadorDeBotes(b);
+    }
     public void iniciarDispensadorDeBotes (int i){
        botes=i;
        
