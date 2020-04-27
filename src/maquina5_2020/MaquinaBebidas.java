@@ -1,7 +1,9 @@
 package maquina5_2020;
-
+/*
+@mithjack
+*/
 public class MaquinaBebidas {
-	private ContadorDeMonedas contador; //Contador de monedas de la maquina
+	private ContadorDeMonedas contador;
 	private DispensadorDeBotes cola, limon, naranja, tonica, agua;
 	private float precio;
 	
@@ -12,7 +14,6 @@ public class MaquinaBebidas {
 	/* int b, cantidad inicial de botes en los dispensadores */
 	/* float pvp, precio de las bebidas */
 	/* Salidas: Ninguna */
-	
 	public void iniciarMaquinaDeBebidas (float m, int b, float pvp){
             this.cola= new DispensadorDeBotes(b);
 	    this.limon= new DispensadorDeBotes(b);
@@ -20,8 +21,7 @@ public class MaquinaBebidas {
 	    this.tonica= new DispensadorDeBotes(b);
 	    this.agua= new DispensadorDeBotes(b);
             this.precio= pvp;
-            this.contador= new ContadorDeMonedas(m);
-		
+            contador= new ContadorDeMonedas();	
 	}
 	
 	/* Responder a una acci�n del usuario. Discrimina el tipo de
@@ -53,7 +53,7 @@ public class MaquinaBebidas {
             System.out.println("De Tonica hay: "+tonica.botesDisponibles());
             System.out.println("De Agua hay: "+agua.botesDisponibles());
             System.out.println("Precio total: "+precio);
-            System.out.println("Saldo Disponible: "+contador.getSaldo());  
+            System.out.println("Saldo Disponible: "+contador.saldo());  
         } 
         
         
@@ -61,24 +61,23 @@ public class MaquinaBebidas {
 	monedas */
 	/* Entradas: char o, la orden del usuario */
 	/* Salidas: Ninguna */
-	
 	private void ordenMonedas (char o){
         
         switch (o){
             case 'A':
-                contador.insertarMoneda(0.05);
+                contador.insertarMoneda(0.05F);
             break;
             
             case 'B': 
-                contador.insertarMoneda(0.10);
+                contador.insertarMoneda(0.10F);
             break;
             
             case 'C': 
-                contador.insertarMoneda(0.20);
+                contador.insertarMoneda(0.20F);
             break;
             
             case 'D':
-                contador.insertarMoneda(0.50);
+                contador.insertarMoneda(0.50F);
             break;
             
             case 'E':
@@ -101,8 +100,8 @@ public class MaquinaBebidas {
                 
             case 1:                             
                 if(cola.pulsarBoton()==true){
-                    if(precio<=contador.Saldo()){
-                        cola.iniciarDispensadorDeBotes(cola.botesDisponibles ()-1);
+                    if(precio<=contador.saldo()){
+                        cola.iniciarDispensadorDeBotes(cola.botesDisponibles()-1);
                     }
                     else{System.out.println("Te faltan monedas");}
                 }
@@ -111,8 +110,8 @@ public class MaquinaBebidas {
             
             case 2:
                 if(limon.pulsarBoton()==true){
-                    if(precio<=contador.Saldo()){
-                        limon.iniciarDispensadorDeBotes(limon.botesDisponibles ()-1);
+                    if(precio<=contador.saldo()){
+                        limon.iniciarDispensadorDeBotes(limon.botesDisponibles()-1);
                     }
                     else{System.out.println("Te faltan monedas");}
                 }
@@ -121,8 +120,8 @@ public class MaquinaBebidas {
             
             case 3:
                 if(naranja.pulsarBoton()==true){
-                    if(precio<=contador.Saldo()){
-                        naranja.iniciarDispensadorDeBotes(naranja.botesDisponibles ()-1);
+                    if(precio<=contador.saldo()){
+                        naranja.iniciarDispensadorDeBotes(naranja.botesDisponibles()-1);
                     }
                     else{System.out.println("Te faltan monedas");}
                 }
@@ -131,7 +130,7 @@ public class MaquinaBebidas {
             
             case 4:
                 if(tonica.pulsarBoton()==true){
-                    if(precio<=contador.Saldo()){
+                    if(precio<=contador.saldo()){
                         tonica.iniciarDispensadorDeBotes(tonica.botesDisponibles ()-1);
                     }
                     else{System.out.println("Te faltan monedas");}
@@ -141,8 +140,8 @@ public class MaquinaBebidas {
             
             case 5:                                             
                 if(agua.pulsarBoton()==true){
-                    if(precio<=contador.Saldo()){
-                        agua.iniciarDispensadorDeBotes(agua.botesDisponibles ()-1);
+                    if(precio<=contador.saldo()){
+                        agua.iniciarDispensadorDeBotes(agua.botesDisponibles()-1);
                     }
                     else{System.out.println("Te faltan monedas");}
                 }
