@@ -106,7 +106,6 @@ public class MaquinaBebidas {
                     }
                     else{System.out.println("Te faltan monedas");}
                 }
-                
                 else{System.out.println("No quedan mas latas");}
             break;
             
@@ -117,7 +116,6 @@ public class MaquinaBebidas {
                     }
                     else{System.out.println("Te faltan monedas");}
                 }
-                
                 else{System.out.println("No quedan mas latas");}
             break;
             
@@ -128,7 +126,6 @@ public class MaquinaBebidas {
                     }
                     else{System.out.println("Te faltan monedas");}
                 }
-                
                 else{System.out.println("No quedan mas latas");}
             break;
             
@@ -139,7 +136,6 @@ public class MaquinaBebidas {
                     }
                     else{System.out.println("Te faltan monedas");}
                 }
-                
                 else{System.out.println("No quedan mas latas");}
             break;
             
@@ -150,7 +146,6 @@ public class MaquinaBebidas {
                     }
                     else{System.out.println("Te faltan monedas");}
                 }
-                
                 else{System.out.println("No quedan mas latas");}
             break;
             
