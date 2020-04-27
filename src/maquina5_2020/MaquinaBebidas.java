@@ -43,11 +43,11 @@ public class MaquinaBebidas {
             if(o=='1'||o=='2'||o=='3'||o=='4'||o=='5'){
                 ordenSeleccion(o);
             }
-
-            if(o=='A'||o=='B'||o=='C'||o=='D'||o=='E'||o=='R'){
-                ordenMonedas(o);
-             }  
-            
+            else {           
+            	if(o=='A'||o=='B'||o=='C'||o=='D'||o=='E'||o=='R'){
+            		ordenMonedas(o);
+            	}  
+            }   
 	}
         
         
@@ -58,11 +58,11 @@ public class MaquinaBebidas {
 	/* Salidas: Ninguna */
 	public void visualizarMaquina (){
             System.out.println("De Cola hay: "+cola.botesDisponibles());
-            System.out.println("De Naranja hay: "+naranja.botesDisponibles());
             System.out.println("De Limon hay: "+limon.botesDisponibles());
+            System.out.println("De Naranja hay: "+naranja.botesDisponibles());
             System.out.println("De Tonica hay: "+tonica.botesDisponibles());
             System.out.println("De Agua hay: "+agua.botesDisponibles());
-            System.out.println("Precio total: "+precio);
+            System.out.println("Precio de las bebidas: "+precio);
             System.out.println("Saldo Disponible: "+contador.saldo());  
         } 
         
