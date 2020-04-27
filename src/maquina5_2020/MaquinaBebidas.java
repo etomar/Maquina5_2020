@@ -57,7 +57,7 @@ public class MaquinaBebidas {
 	/* Entradas: Ninguna */
 	/* Salidas: Ninguna */
 	public void visualizarMaquina (){
-            System.out.println("De Cola hay: "+cola.botesDisponibles());
+            System.out.println("\nDe Cola hay: "+cola.botesDisponibles());
             System.out.println("De Limon hay: "+limon.botesDisponibles());
             System.out.println("De Naranja hay: "+naranja.botesDisponibles());
             System.out.println("De Tonica hay: "+tonica.botesDisponibles());
@@ -67,7 +67,7 @@ public class MaquinaBebidas {
         } 
         
         
-	/* Realiza las acciones relacionadas con la introducció de
+	/* Realiza las acciones relacionadas con la introducción de
 	monedas */
 	/* Entradas: char o, la orden del usuario */
 	/* Salidas: Ninguna */
@@ -109,37 +109,48 @@ public class MaquinaBebidas {
 		if (contador.saldo()>=precio) {
 			switch (o) {
 			case '1':
-				if (cola.pulsarBoton())
+				if (cola.pulsarBoton()) {
 					System.out.println(contador.darCambioDe(precio));
-				else
+				} else {
 					System.out.println("No quedan latas");
+				}
 				break;
+				
 			case '2':
-				if (limon.pulsarBoton())
+				if (limon.pulsarBoton()){
 					System.out.println(contador.darCambioDe(precio));
-				else
+				} else {
 					System.out.println("No quedan latas");
+				}
 				break;
+				
 			case '3':
-				if (naranja.pulsarBoton())
+				if (naranja.pulsarBoton()){
 					System.out.println(contador.darCambioDe(precio));
-				else
+				} else {
 					System.out.println("No quedan latas");
+				}
 				break;
+				
 			case '4':
-				if (tonica.pulsarBoton())
+				if (tonica.pulsarBoton()){
 					System.out.println(contador.darCambioDe(precio));
-				else
+				} else {
 					System.out.println("No quedan latas");
+				}
 				break;
+				
 			case '5':
-				if (agua.pulsarBoton())
+				if (agua.pulsarBoton()){
 					System.out.println(contador.darCambioDe(precio));
-				else
+				} else {
 					System.out.println("No quedan latas");
+				}
 				break;
-			}
-		} else {System.out.println("No tienes saldo suficiente");
+				
+				}
+		} else {
+			System.out.println("No tienes saldo suficiente");
 		}
 	}
 }
